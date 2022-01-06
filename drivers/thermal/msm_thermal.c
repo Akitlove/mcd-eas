@@ -4917,14 +4917,6 @@ static struct kernel_param_ops module_ops = {
 module_param_cb(intelli_enabled, &module_ops, &intelli_enabled, 0644);
 MODULE_PARM_DESC(intelli_enabled, "enforce thermal limit on cpu");
 
-/* Temp Threshold */
-module_param_named(temp_threshold, msm_thermal_info.limit_temp_degC,
-			int, 0664);
-module_param_named(hotplug_temp_degC, msm_thermal_info.hotplug_temp_degC,
-		   uint, 0664);
-module_param_named(freq_mitig_temp_degc,
-		   msm_thermal_info.freq_mitig_temp_degc, uint, 0644);
-
 /* Control Mask */
 module_param_named(freq_mitig_control_mask,
 		   msm_thermal_info.freq_mitig_control_mask, uint, 0644);
